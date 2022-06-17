@@ -1,2 +1,11 @@
-import CButton from '@components/controls/CButton'
-import MFooter from '../components/MFooter'
+import React from "react";
+import CTable from "../../../common/components/layout/CTable";
+const Login = () => {
+  return (
+    <div>
+      <CTable />
+    </div>
+  );
+};
+
+export default Login;
