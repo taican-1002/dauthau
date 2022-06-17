@@ -1,0 +1,36 @@
+@import "custom";
+@import "variables";
+@import "mixin";
+@import "overwrite";
+
+@import "layouts/index";
+@import "others/index";
+@import "components/index";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+
+  main {
+    flex: 1 1;
+
+    padding-bottom: 24px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
