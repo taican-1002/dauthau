@@ -1,0 +1,103 @@
+.MuiContainer-root {
+  max-width: 1640px;
+
+  &.main-container {
+    @include xs() {
+      padding: 0 8px;
+    }
+
+    @include xl() {
+      padding: 0;
+    }
+  }
+}
+
+.fl-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root .MuiTab-root.Mui-selected {
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#root main {
+  // overflow: auto;
+  overflow: overlay;
+}
+
+.MuiPopover-paper {
+  margin-top: 14px !important;
+}
+
+.MuiAutocomplete-popper {
+  padding-top: 1px !important;
+}
+
+.MuiCollapse-root {
+  width: 100%;
+
+  .MuiCollapse-wrapper {
+    padding-top: 16px;
+  }
+}
+
+.drawer-menu {
+  .MuiInput-input {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .MuiInput-root:before {
+    border-bottom: none;
+  }
+
+  .MuiInput-root:hover:not(.Mui-disabled):before {
+    border-bottom: none;
+  }
+
+  .MuiSvgIcon-root {
+    color: #fff;
+  }
+
+  .MuiFormControl-root {
+    margin: 20px 0;
+  }
+}
+
+/* Nav */
+.nav {
+  a {
+    &.active {
+      pointer-events: none;
+    }
+  }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  /* opacity: 0; */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}

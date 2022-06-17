@@ -1,0 +1,48 @@
+header {
+  height: 80px;
+
+  @include xs {
+    .main-nav {
+      display: none;
+    }
+    .sub-nav {
+      display: flex;
+    }
+  }
+  @include lg {
+    .main-nav {
+      display: flex;
+    }
+    .sub-nav {
+      display: none;
+    }
+  }
+
+  &.MuiPaper-root {
+    background-color: $color-primary;
+
+    justify-content: center;
+  }
+
+  .logo {
+    height: 100%;
+
+    max-height: 50px;
+  }
+
+  .MuiToolbar-root {
+    justify-content: space-between;
+  }
+
+  .nav {
+    gap: 40px;
+
+    .nav-items {
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

@@ -1,10 +1,15 @@
 import React from "react";
-import CTable from "../../../common/components/layout/CTable";
+import MLogin from "../components/Login/index.js";
+import MHeader from "../components/MHeader.js";
+import MFooter from "../components/MFooter.js";
+
 const Login = () => {
   return (
-    <div>
-      <CTable />
-    </div>
+    <>
+      <MHeader />
+      <MLogin />
+      <MFooter />
+    </>
   );
 };
 

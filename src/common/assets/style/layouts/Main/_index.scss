@@ -1,0 +1,14 @@
+@import "CHeader/index";
+@import "CFooter/index";
+@import "sidebar";
+
+main {
+  .page-title {
+    font-size: 32px !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 32px auto 16px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
