@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import CPagination from "../../common/components/controls/CPagination/CPagination";
-=======
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -44,9 +40,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-
-
-export default function Home() {
+const Home = () => {
   const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
@@ -56,15 +50,8 @@ export default function Home() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
->>>>>>> 9891feed490294674d775467103584a3d1c90e44
 
-const Home = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <CPagination count={10} color="primary" />
-    </div>
-=======
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
@@ -88,7 +75,7 @@ const Home = () => {
           {/* <CInputField/> */}
         </Toolbar>
       </AppBar>
-      <CNavbar open={open} handleDrawerClose={handleDrawerClose}/>
+      <CNavbar open={open} handleDrawerClose={handleDrawerClose} />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Typography paragraph>
@@ -122,7 +109,6 @@ const Home = () => {
         </Typography>
       </Box>
     </Box>
->>>>>>> 9891feed490294674d775467103584a3d1c90e44
   );
 };
 
