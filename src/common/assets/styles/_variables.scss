@@ -1,0 +1,40 @@
+// #region Color
+$color-primary: #147DB8;
+
+$color-select: #1E1918;
+$color-hover-green: #DFE5E4;
+$color-light-blue: #00D1FF;
+
+// Info
+$color-success: #009278;
+$color-info: #0157BC;
+$color-error: #BC0101;
+$color-warning: #FBB500;
+$color-primary-tint: #EDF6FB;
+$color-error-disabled: #EFD9D9;
+$color-primary-disabled: #B9D8EA;
+$color-warning-disabled: #FEE9B3;
+
+// Netural
+$color-white: #FFFFFF;
+$color-light-gray: #BCBFC5;
+$color-mid-gray: #A2A7B2;
+$color-dark-gray: #878B94;
+$color-black: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;;
+
+// #endregion Color
+
+// #region Font
+$fs-normal: 16px;
+$fs-lg: 20px;
+$fs-xl: 32px;
+// #endregion Font
+
+// #region Breakpoint
+$breakpoint-xs: 0;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1536px;
+$breakpoint-xxl: 1920px;
+// #endregion Breakpoint 
