@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import "./common/assets/styles/index.scss";
-=======
 import "./common/assets/style/index.scss";
->>>>>>> 78f6fa99f3374ed8ae186985313d54629e8e8074
 
 import React from "react";
 import ReactDOM from "react-dom";
