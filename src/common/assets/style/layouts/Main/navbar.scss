@@ -1,0 +1,21 @@
+.navbar {
+
+    .MuiDrawer-paper{
+        border-right: 0;
+    }
+
+    .navbar &__buton__toggle{
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        z-index: 1;
+        color: $color-white;
+        transform: scale(110%);
+    }
+    
+    .navbar &__header {
+        min-height: 80px;
+        justify-content: left;
+    }
+
+}

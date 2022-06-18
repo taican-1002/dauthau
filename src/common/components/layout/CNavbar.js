@@ -14,11 +14,11 @@ import {
     ChevronRight as ChevronRightIcon,
 } from "@mui/icons-material"
 
-import Logo from "../../assets/image/logovtco.png"
+import Logo from "../../assets/images/logovtco.png"
 
 
-const drawerWidth = 240;
-const drawerWidthSmall = 150;
+const drawerWidth = 320;
+const drawerWidthSmall = 100;
 
 const openedMixin = (theme) => ({
     width: drawerWidth,
@@ -73,18 +73,23 @@ function CNavbar(props) {
 
   return (
     <>
-      <Drawer variant="permanent" open={props.open}>
-        <DrawerHeader>
-        <img src={Logo} alt="" />
-          <IconButton onClick={props.handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
+      <Drawer className='navbar'
+       variant="permanent" 
+       open={props.open}
+      >
+        <IconButton className='navbar__buton__toggle' onClick={()=>{props.open?props.handleDrawerClose():props.handleDrawerOpen()}}>
+          {props.open ? (
               <ChevronLeftIcon />
-            )}
-          </IconButton>
+              ) : (
+              <ChevronRightIcon />
+          )}
+        </IconButton>
+        <DrawerHeader
+          className='navbar__header'
+          sx={{padding: props.open ? '0 39px' : '0' }} 
+        >
+          <img src={Logo} alt="" />
         </DrawerHeader>
-        {/* <Divider /> */}
         <CMenu open={props.open}/>
       </Drawer>
     </>
