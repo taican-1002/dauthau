@@ -1,0 +1,13 @@
+@import "/src/common/assets/style/index.scss";
+
+#root .MuiPaginationItem-root {
+  border: 1px solid #edf6fb;
+  padding: 13px 25px;
+  border-radius: 4.8px 0px 0px 4.8px;
+  height: auto;
+  color: $color-primary;
+}
+
+#root .MuiPaginationItem-root.Mui-selected {
+  color: #fff;
+}

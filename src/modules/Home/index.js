@@ -9,6 +9,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CNavbar from "../../common/components/layout/CNavbar";
 
+import CPagination from "../../common/components/controls/CPagination/CPagination";
+
 const drawerWidth = 240;
 const drawerWidthSmall = 150;
 
@@ -107,6 +109,8 @@ const Home = () => {
           eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
           posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
+
+        <CPagination count={10} color="primary" size="large" />
       </Box>
     </Box>
   );
