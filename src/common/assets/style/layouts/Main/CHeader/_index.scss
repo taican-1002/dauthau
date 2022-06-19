@@ -56,6 +56,15 @@ header {
     border: 1px solid $color-white;
     border-radius: 4px;
 
+    .MuiBox-root {
+      border: none;
+      padding: 0;
+
+      .MuiOutlinedInput-notchedOutline{
+        display: none;
+      }
+    }
+
     &__input {
 
       .MuiInputBase-input {
