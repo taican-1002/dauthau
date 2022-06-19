@@ -13,14 +13,29 @@ const listItems = [
 
 function CMenu(props) {
 
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  const handleListItemClick = (event, index) => {
+      console.log(index)
+    setSelectedIndex(index);
+  };
+
     return (
-        <List className = 'list-menu'>
+        <List 
+            id='list-menu'
+            className = 'list-menu'
+            component="nav"
+            aria-label="main mailbox folders"
+        >
         {
             listItems.map((item, index)=>(
                 <CListItem
                     key = {index}
                     text = {item.text}
                     open = {props.open}
+                    index = {index}
+                    selectedIndex = {selectedIndex}
+                    handleListItemClick = {handleListItemClick}
                 >
                     <item.icon/>
                 </CListItem>

@@ -1,0 +1,15 @@
+.home{
+
+    .home{
+
+        &__content__page {
+            background-color: $color-white;
+        }
+
+        &__search .MuiBox-root{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+        
+}

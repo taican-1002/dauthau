@@ -1,18 +1,23 @@
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import MuiAppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import CssBaseline from "@mui/material/CssBaseline";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import CNavbar from "../../common/components/layout/CNavbar";
+import {Box, AppBar as MuiAppBar, Toolbar, CssBaseline} from "@mui/material";
 
+<<<<<<< HEAD
 import CPagination from "../../common/components/controls/CPagination/CPagination";
 
 const drawerWidth = 240;
 const drawerWidthSmall = 150;
+=======
+import { Search as SearchIcon } from "@mui/icons-material";
+
+import CNavbar from "../../common/components/layout/CNavbar";
+import CInput from "../../common/components/controls/CInput/CInput";
+import CButton from "../../common/components/controls/CButton/CButton";
+import CTable from "../../common/components/layout/CTable";
+
+const drawerWidth = 320;
+const drawerWidthSmall = 100;
+>>>>>>> 3f34cad68182f065bff71a8db5cb57b43e5a9da6
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -54,32 +59,29 @@ const Home = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box className='home' sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: "none" }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography> */}
-
-          {/* <CInputField/> */}
+        <Toolbar className="home__search">
+          <Box>
+            <CInput
+              placeholder='Tìm tất cả ...'
+              type='text'
+            />
+            <CButton>
+              <SearchIcon/>
+            </CButton>
+          </Box>
         </Toolbar>
       </AppBar>
-      <CNavbar open={open} handleDrawerClose={handleDrawerClose} />
+      <CNavbar
+          open={open} 
+          handleDrawerClose={handleDrawerClose}
+          handleDrawerOpen={handleDrawerOpen}
+      />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
+<<<<<<< HEAD
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
@@ -111,6 +113,11 @@ const Home = () => {
         </Typography>
 
         <CPagination count={10} color="primary" size="large" />
+=======
+        <Box className='home__content__page'>
+          <CTable></CTable>
+        </Box>
+>>>>>>> 3f34cad68182f065bff71a8db5cb57b43e5a9da6
       </Box>
     </Box>
   );
