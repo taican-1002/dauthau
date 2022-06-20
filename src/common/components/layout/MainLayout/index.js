@@ -33,13 +33,12 @@ const MainLayout = (props) => {
       <CssBaseline/>
       <CHeader open={open}/>
       <CNavbar
-          open={open} 
-          handleDrawerClose={handleDrawerClose}
-          handleDrawerOpen={handleDrawerOpen}
+        open={open}
+        handleDrawerClose={handleDrawerClose}
+        handleDrawerOpen={handleDrawerOpen}
       />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-
         <Box className='home__content__page'>
           {props.children}
         </Box>
