@@ -46,3 +46,53 @@ header {
     }
   }
 }
+
+// header
+.header {
+
+  &__search {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid $color-white;
+    border-radius: 4px;
+
+    .MuiBox-root {
+      border: none;
+      padding: 0;
+
+      .MuiOutlinedInput-notchedOutline{
+        display: none;
+      }
+    }
+
+    &__input {
+
+      .MuiInputBase-input {
+        width: 258px;
+        height: 38px;
+        box-sizing: border-box;
+      }
+    }
+
+    #header &__button {
+      min-width: unset;
+      padding: 0 9px;
+      border-radius: 0px 4px 4px 0px;
+      background-color: $color-primary;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    &__noti {
+      display: flex;
+      align-items: center;
+      
+      .MuiButtonBase-root{
+        color: $color-white;
+      }
+    }
+  }
+  
+}

@@ -1,63 +1,25 @@
-.c-table {
-  thead {
-    th {
-      text-transform: capitalize;
-    }
-  }
-
-  th,
-  td {
-    &.sticky {
-      position: sticky;
-      &.left {
-        left: 0;
-      }
-      &.right {
-        right: 0;
-      }
-    }
-  }
-  .bg-white {
-    background-color: white;
-  }
-
-  &.c-tab-panel {
-    // border-collapse: collapse;
-    margin-top: -10px; //Bỏ đi khoảng spacing trên table
-
-    thead {
-      height: 50px;
-
-      tr {
-        border-radius: 0;
-      }
-    }
-
-    td {
-      height: 50px;
-    }
-  }
+#table th, #table td {
+  padding: 0;
 }
 
-// Style for Tab & Table (receipt form)
-.MuiTab-root {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+table {
+  width: 100%;
 
-  &.Mui-selected {
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+  th {
+    text-align: unset;
+    color: $color-primary;
   }
-}
 
-// .MuiCollapse-root {
-//   &.receipt-collapse {
-//     margin-top: 0;
-//   }
-// }
-
-.receipt-collapse {
-  .MuiCollapse-wrapper {
-    padding-top: 0;
+  th > div {
+    font-weight: 700;
+  }
+  
+  th > div,
+  td > div {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 0 10px;
+    font-size: 16px;
   }
 }
