@@ -49,24 +49,22 @@ header {
 
 // header
 .header {
-
   &__search {
     display: flex;
     justify-content: flex-start;
-    border: 1px solid $color-white;
+    border: 1px solidwhite;
     border-radius: 4px;
 
     .MuiBox-root {
       border: none;
       padding: 0;
 
-      .MuiOutlinedInput-notchedOutline{
+      .MuiOutlinedInput-notchedOutline {
         display: none;
       }
     }
 
     &__input {
-
       .MuiInputBase-input {
         width: 258px;
         height: 38px;
@@ -88,11 +86,10 @@ header {
     &__noti {
       display: flex;
       align-items: center;
-      
-      .MuiButtonBase-root{
-        color: $color-white;
+
+      .MuiButtonBase-root {
+        color: white;
       }
     }
   }
-  
 }

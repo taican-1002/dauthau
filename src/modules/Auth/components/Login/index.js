@@ -1,5 +1,4 @@
-import "../../../assets/Auth/styles/Login.scss";
-import vtco from "../../../assets/Auth/images/vtco.png";
+import vtco from "../../../assets/images/vtco.png";
 
 import React from "react";
 import { Container, Grid, TextField, Button } from "@mui/material";
@@ -9,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const handleLogin = () => {
-    navigate("/home");
+    navigate("/degree");
   };
   return (
     <div className="login">

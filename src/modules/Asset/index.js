@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Asset() {
-  return (
-    <div>Asset</div>
-  )
-}
+const index = () => {
+  return <div>index</div>;
+};
 
-export default Asset
+export default index;

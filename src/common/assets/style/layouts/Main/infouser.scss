@@ -1,41 +1,38 @@
 .info-user {
+  .MuiButton-root {
+    padding: 10px 0;
+  }
 
-    .MuiButton-root {
-        padding: 10px 0;
+  .info-user &__wrap__user {
+    padding-left: 25px;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    text-transform: none;
+    padding: 0 20px 0 15px;
+
+    .info-user &__name,
+    .info-user &__decentralize {
+      margin: 0;
+      line-height: unset;
     }
 
-    .info-user &__wrap__user {
-        padding-left: 25px;
-
+    .info-user &__name {
+      font-size: 18px;
     }
 
-    &__user {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: $color-white;
-        text-transform: none;
-        padding: 0 20px 0 15px;
-
-        .info-user &__name,
-        .info-user &__decentralize {
-            margin: 0;
-            line-height: unset;
-        }
-
-        .info-user &__name{
-            font-size: 18px;
-        }
-
-        .info-user &__decentralize{
-            font-size: 12px;
-        }
+    .info-user &__decentralize {
+      font-size: 12px;
     }
+  }
 
-    &__toggle {
-        path {
-            color: $color-white;
-        }
+  &__toggle {
+    path {
+      color: white;
     }
-
+  }
 }
