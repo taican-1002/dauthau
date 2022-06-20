@@ -89,7 +89,7 @@ const CTable = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <table className="table">
+          <table className="table-primary">
             <thead>
               <tr>
                 <th scope="col">
