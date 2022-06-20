@@ -1,4 +1,5 @@
-#table th, #table td {
+#table th,
+#table td {
   padding: 0;
 }
 
@@ -13,7 +14,7 @@ table {
   th > div {
     font-weight: 700;
   }
-  
+
   th > div,
   td > div {
     display: flex;
@@ -21,5 +22,13 @@ table {
     min-height: 60px;
     padding: 0 10px;
     font-size: 16px;
+  }
+}
+.MuiTableCell-root {
+  border-right: 1px solid rgba(224, 224, 224, 1);
+  padding: 10px !important;
+  span {
+    color: #147db8 !important;
+    font-weight: bold;
   }
 }

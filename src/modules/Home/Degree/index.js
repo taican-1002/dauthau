@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import CTable from "../../../common/components/layout/CTable";
 
 function Degree() {
   return (
-    <div>Degree</div>
-  )
+    <div>
+      <CTable></CTable>
+    </div>
+  );
 }
 
-export default Degree
+export default Degree;

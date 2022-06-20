@@ -12,7 +12,16 @@ import {
   TextField,
 } from "@mui/material";
 
-const CPagination = ({ total, count, className, color, size }) => {
+const CPagination = ({
+  onChange,
+  page,
+  defaultPage,
+  total,
+  count,
+  className,
+  color,
+  size,
+}) => {
   const valueArr = [
     {
       value: 20,
@@ -48,7 +57,10 @@ const CPagination = ({ total, count, className, color, size }) => {
 
       <Stack spacing={2}>
         <Pagination
+          onChange={onChange}
+          defaultPage={defaultPage}
           count={count}
+          page={page}
           shape="rounded"
           color={color}
           size={size}

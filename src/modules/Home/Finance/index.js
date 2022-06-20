@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+// import CTable from "../../../common/components/layout/CTable";
 
 function Finance() {
   return (
-    <div>Finance</div>
-  )
+    <div>
+      {/* <CTable></CTable> */}
+      alo
+    </div>
+  );
 }
 
-export default Finance
+export default Finance;
