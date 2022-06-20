@@ -36,6 +36,7 @@ const rows = [
 
 export default function DataTable() {
   return (
+<<<<<<< HEAD
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
@@ -44,6 +45,100 @@ export default function DataTable() {
         rowsPerPageOptions={[5]}
         checkboxSelection
       />
+=======
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <table id="table" className="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      checked={masterChecked}
+                      id="mastercheck"
+                      onChange={(e) => onMasterCheck(e)}
+                    />
+                  </div>
+                </th>
+                <th scope="col">
+                  <div>
+                    STT
+                  </div>
+                </th>
+                <th scope="col">
+                  <div>
+                    Name
+                  </div>
+                </th>
+                <th scope="col">
+                  <div>
+                    Email
+                  </div>
+                </th>
+                <th scope="col">
+                  <div>
+                    Phone
+                  </div>
+                </th>
+                <th scope="col">
+                  <div>
+                    Website
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {list.map((user, index) => (
+                <tr key={user.id} className={user.selected ? "selected" : ""}>
+                  <th scope="row">
+                    <div>
+                      <input
+                        type="checkbox"
+                        checked={user.selected}
+                        className="form-check-input"
+                        id="rowcheck{user.id}"
+                        onChange={(e) => onItemCheck(e, user)}
+                      />
+                    </div>
+                  </th>
+                  <td>
+                    <div>
+                      {index}
+                    </div>
+                  </td>
+                  <td>
+                    <div>{user.name}</div>
+                  </td>
+                  <td>
+                    <div>{user.email}</div>
+                  </td>
+                  <td>
+                    <div>{user.phone}</div>
+                  </td>
+                  <td>
+                    <div>{user.website}</div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {/* <button className="btn btn-primary" onClick={getSelectedRows()}>
+            Get Selected Items {selectedList.length}
+          </button>
+          <div className="row">
+            <b>All Row Items:</b>
+            <code>{JSON.stringify(list)}</code>
+          </div>
+          <div className="row">
+            <b>Selected Row Items(Click Button To Get):</b>
+            <code>{JSON.stringify(selectedList)}</code>
+          </div> */}
+        </div>
+      </div>
+>>>>>>> 6a15c59179dfa745e9a22ef358482fcc3d66f381
     </div>
   );
 }

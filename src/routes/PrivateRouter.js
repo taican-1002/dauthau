@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../modules/Home/index";
-import Degree from "../modules/Degree";
-import Certificate from "../modules/Certificate";
-import Finance from "../modules/Finance";
-import Asset from "../modules/Asset";
+import Degree from "../modules/Home/Degree";
+import Certificate from "../modules/Home/Certificate";
+import Finance from "../modules/Home/Finance";
+import Asset from "../modules/Home/Asset";
 
 const PrivateRouter = () => {
   return (
