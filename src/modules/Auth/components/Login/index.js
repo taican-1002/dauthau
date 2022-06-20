@@ -8,11 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const handleLogin = () => {
-<<<<<<< HEAD
-    navigate("/degree");
-=======
     navigate("/");
->>>>>>> 6a15c59179dfa745e9a22ef358482fcc3d66f381
   };
   return (
     <div className="login">
