@@ -1,14 +1,12 @@
 import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import {Box, CssBaseline} from "@mui/material";
 
-import CPagination from "../../common/components/controls/CPagination/CPagination";
-import CNavbar from "../../common/components/layout/CNavbar";
-import CTable from "../../common/components/layout/CTable";
-import CHeader from "../../common/components/layout/CHeader";
+import CNavbar from "../CNavbar";
+import CHeader from "../CHeader";
 
-const drawerWidth = 320;
-const drawerWidthSmall = 100;
+// const drawerWidth = 320;
+// const drawerWidthSmall = 100;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -19,7 +17,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-const Home = () => {
+const MainLayout = (props) => {
   const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
@@ -43,12 +41,11 @@ const Home = () => {
         <DrawerHeader />
 
         <Box className='home__content__page'>
-          <CTable></CTable>
-          <CPagination count={10} color="primary" size="large" />
+          {props.children}
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default Home;
+export default MainLayout;
