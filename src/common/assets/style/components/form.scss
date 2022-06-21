@@ -1,0 +1,40 @@
+.form {
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 1400px;
+        border: none;
+        padding: 30px 43.5px;
+        border-radius: 5px;
+        background-color: $color-white;
+        box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+
+        &__body {
+            height: 518px;
+            overflow-y: scroll;
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .form &__cancel {
+                background-color: $color-white;
+                margin-right: 10px;
+                border: 1px solid $color-primary;
+                color: $color-primary;
+            }
+
+            .form &__cancel:hover {
+                background-color: #fcecec;
+            }
+            
+            .form &__save {
+                background-color: $color-primary;
+            }
+        }
+    }
+}

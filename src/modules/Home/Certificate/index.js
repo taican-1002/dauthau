@@ -1,8 +1,9 @@
 import React from 'react'
+import ModalDetail from './ModalDetail'
 
 function Certificate() {
   return (
-    <div>Certificate</div>
+    <ModalDetail/>
   )
 }
 

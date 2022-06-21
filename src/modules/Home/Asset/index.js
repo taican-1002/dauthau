@@ -1,7 +1,10 @@
 import React from "react";
+import ModalDetail from "./ModalDetail";
 
 const index = () => {
-  return <div>index</div>;
+  return (
+    <ModalDetail/>
+  );
 };
 
 export default index;

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { DatePicker } from "@mui/x-date-pickers";
 import { Box, TextField } from "@mui/material";
 import dayjs from "dayjs";
-import CFormControl from "../CFormControl";
+import CFormControl from "../CFormControl/CFormControl"
 
 const CDate = ({ value, onChange, error, className, ...props }) => {
   const [TMP, setTMP] = useState(value);

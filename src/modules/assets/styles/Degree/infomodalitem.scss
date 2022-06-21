@@ -1,0 +1,39 @@
+.info-item {
+    border: 1px solid $color-primary;
+    padding: 20px 51.5px 0;
+    margin-bottom: 30px;
+    
+    .MuiGrid-root.MuiGrid-item:nth-child(2n + 1) {
+        padding-right: 43.5px;
+    }
+
+    .MuiGrid-root.MuiGrid-item:nth-child(2n) {
+        padding-left: 43.5px;
+    }
+
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 19px;
+
+        .MuiInputBase-input {
+            width: 316px;
+            height: 27px;
+        }
+
+        &.disable-input .MuiInputBase-input{
+            background-color: $color-disable-input;
+        }
+
+    }
+
+    #info-item &__input .MuiSelect-select {
+        height: 27px;
+        padding: 10px 20px;
+    }
+
+    .MuiGrid-root.MuiGrid-item:last-child &__input {
+        padding-bottom: 20px;
+    }
+}
