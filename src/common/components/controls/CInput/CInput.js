@@ -1,14 +1,19 @@
 import React, { memo, useCallback } from "react";
 import { OutlinedInput, styled } from "@mui/material";
-import CFormControl from "../CFormControl/CFormControl"
+import CFormControl from "../CFormControl/CFormControl";
 
 const StyledInput = styled(OutlinedInput)(({ theme }) => ({
   "& input": {
-    padding: "11px 20px 10px",
+    padding: "10px",
     height: "unset",
-    lineHeight: "18.75px",
-    backgroundColor: '#fff',
-    outline: 'none'
+    backgroundColor: "#fff",
+    outline: "none",
+    borderRadius: "5px",
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+    border: "1px solid #BCBFC5",
+    fontWeight: "400",
+    fontSize: "16px",
+    lineHeight: "19px",
   },
 }));
 

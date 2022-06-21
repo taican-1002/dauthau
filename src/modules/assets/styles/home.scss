@@ -1,8 +1,24 @@
+@import "../../../common//assets/style/index.scss";
+
 .home {
   .home {
     &__content__page {
       background-color: white;
-      margin-top: 80px;
+      margin: 20px 20px 0;
+      padding: 15px;
     }
   }
+}
+
+.title {
+  color: $color-primary;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.input-date {
+  width: 260px;
 }

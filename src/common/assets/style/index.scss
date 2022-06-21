@@ -7,6 +7,7 @@
 @import "others/index";
 @import "components/index";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -14,10 +15,10 @@
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-html body{
+html body {
   background-color: $color-background;
 }
 
@@ -33,9 +34,7 @@ html body{
 
     padding-bottom: 24px;
   }
-  
 }
-
 
 a {
   text-decoration: none;

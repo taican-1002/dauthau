@@ -51,7 +51,7 @@ const CPagination = ({
         justifyContent: "center",
       }}
     >
-      <Typography variant="h5" component="h6" sx={{ marginRight: "40px" }}>
+      <Typography variant="span" component="span" sx={{ marginRight: "40px" }}>
         Tất cả {total} dòng
       </Typography>
 
@@ -90,7 +90,7 @@ const CPagination = ({
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h6" component="h6">
+        <Typography variant="span" component="span">
           Go to &nbsp;
         </Typography>
         <TextField hiddenLabel id="filled-hidden-label-small" size="small" />

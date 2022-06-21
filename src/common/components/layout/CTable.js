@@ -15,30 +15,33 @@ import { visuallyHidden } from "@mui/utils";
 
 import CPagination from "../controls/CPagination/CPagination";
 
-function createData(name, calories, fat, carbs, protein) {
-  return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
-  };
-}
-
 const rows = [
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Donut", 452, 25.0, 51, 4.9),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Honeycomb", 408, 3.2, 87, 6.5),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Jelly Bean", 375, 0.0, 94, 0.0),
-  createData("KitKat", 518, 26.0, 65, 7.0),
-  createData("Lollipop", 392, 0.2, 98, 0.0),
-  createData("Marshmallow", 318, 0, 81, 2.0),
-  createData("Nougat", 360, 19.0, 9, 37.0),
-  createData("Oreo", 437, 18.0, 63, 4.0),
+  {
+    id: 1,
+    name: "Công ty VTCO",
+    year: 2021,
+    totalAsset: 11500000,
+    totalLiabilities: 2000000,
+    shortTermAsset: 100000,
+    shortTermDebt: 100000,
+    turnOver: 20000000,
+    profitBeforeTax: 150000,
+    profitAfterTax: 20000,
+    taxFinalizationDeclaration: "test",
+  },
+  {
+    id: 2,
+    name: "Công ty FPT Software",
+    year: 2021,
+    totalAsset: 11500000,
+    totalLiabilities: 2000000,
+    shortTermAsset: 100000,
+    shortTermDebt: 100000,
+    turnOver: 20000000,
+    profitBeforeTax: 150000,
+    profitAfterTax: 20000,
+    taxFinalizationDeclaration: "FPT",
+  },
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -57,50 +60,39 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// This method is created for cross-browser compatibility, if you don't
-// need to support IE11, you can use Array.prototype.sort() directly
-function stableSort(array, comparator) {
-  const stabilizedThis = array.map((el, index) => [el, index]);
-  stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
-    if (order !== 0) {
-      return order;
-    }
-    return a[1] - b[1];
-  });
-  return stabilizedThis.map((el) => el[0]);
-}
-
 const headCells = [
   {
+    id: "stt",
+  },
+  {
     id: "name",
-    numeric: false,
-    disablePadding: true,
-    label: "Dessert (100g serving)",
   },
   {
-    id: "calories",
-    numeric: true,
-    disablePadding: false,
-    label: "Calories",
+    id: "year",
   },
   {
-    id: "fat",
-    numeric: true,
-    disablePadding: false,
-    label: "Fat (g)",
+    id: "totalAsset",
   },
   {
-    id: "carbs",
-    numeric: true,
-    disablePadding: false,
-    label: "Carbs (g)",
+    id: "totalLiabilities",
   },
   {
-    id: "protein",
-    numeric: true,
-    disablePadding: false,
-    label: "Protein (g)",
+    id: "shortTermAsset",
+  },
+  {
+    id: "shortTermDebt",
+  },
+  {
+    id: "turnOver",
+  },
+  {
+    id: "profitBeforeTax",
+  },
+  {
+    id: "profitAfterTax",
+  },
+  {
+    id: "taxFinalizationDeclaration",
   },
 ];
 
@@ -135,7 +127,6 @@ function EnhancedTableHead(props) {
           <TableCell
             key={headCell.id}
             align="left"
-            padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
           >
             <TableSortLabel
@@ -143,7 +134,7 @@ function EnhancedTableHead(props) {
               direction={orderBy === headCell.id ? order : "asc"}
               onClick={createSortHandler(headCell.id)}
             >
-              {headCell.label}
+              {headCell.id}
               {orderBy === headCell.id ? (
                 <Box component="span" sx={visuallyHidden}>
                   {order === "desc" ? "sorted descending" : "sorted ascending"}
@@ -221,8 +212,8 @@ export default function EnhancedTable() {
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  // const emptyRows =
+  //   page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -244,8 +235,9 @@ export default function EnhancedTable() {
             <TableBody>
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.slice().sort(getComparator(order, orderBy)) */}
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              {rows
+                .slice()
+                .sort(getComparator(order, orderBy))
                 .map((row, index) => {
                   const isItemSelected = isSelected(row.name);
                   const labelId = `enhanced-table-checkbox-${index}`;
@@ -269,6 +261,7 @@ export default function EnhancedTable() {
                           }}
                         />
                       </TableCell>
+                      <TableCell align="left">{row.id}</TableCell>
                       <TableCell
                         component="th"
                         id={labelId}
@@ -277,14 +270,22 @@ export default function EnhancedTable() {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="left">{row.calories}</TableCell>
-                      <TableCell align="left">{row.fat}</TableCell>
-                      <TableCell align="left">{row.carbs}</TableCell>
-                      <TableCell align="left">{row.protein}</TableCell>
+                      <TableCell align="left">{row.year}</TableCell>
+                      <TableCell align="left">{row.totalAsset}</TableCell>
+                      <TableCell align="left">{row.totalLiabilities}</TableCell>
+                      <TableCell align="left">{row.shortTermAsset}</TableCell>
+                      <TableCell align="left">{row.shortTermDebt}</TableCell>
+                      <TableCell align="left">{row.turnOver}</TableCell>
+                      <TableCell align="left">{row.profitBeforeTax}</TableCell>
+                      <TableCell align="left">{row.profitAfterTax}</TableCell>
+                      <TableCell align="left">
+                        {row.taxFinalizationDeclaration}
+                      </TableCell>
                     </TableRow>
                   );
                 })}
-              {emptyRows > 0 && (
+              {/** Muốn trang nào cũng 6 rows thì mở này ra*/}
+              {/* {emptyRows > 0 && (
                 <TableRow
                   style={{
                     height: (dense ? 33 : 53) * emptyRows,
@@ -292,7 +293,7 @@ export default function EnhancedTable() {
                 >
                   <TableCell colSpan={6} />
                 </TableRow>
-              )}
+              )} */}
             </TableBody>
           </Table>
         </TableContainer>
