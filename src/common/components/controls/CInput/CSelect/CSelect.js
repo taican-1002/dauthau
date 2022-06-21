@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from "react";
-import {MenuItem,Select} from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 import { styled } from "@mui/material";
 import PropTypes from "prop-types";
 
@@ -24,6 +24,7 @@ const CSelect = memo(
     variant,
     placeholder,
     displayValue,
+    defaultValue,
   }) => {
     const handleChange = useCallback((event) => {
       onChange(event.target.value);
@@ -39,7 +40,9 @@ const CSelect = memo(
         multiple={multiple}
         placeholder={placeholder}
       >
-        <MenuItem value={-1}>Tất cả</MenuItem>
+        <MenuItem value={-1} disabled>
+          {defaultValue}
+        </MenuItem>
         {options?.length > 0 &&
           options.map((option) => (
             <MenuItem value={option.id} key={option.id}>

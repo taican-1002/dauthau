@@ -13,10 +13,13 @@ const listItems = [
 ];
 
 function CMenu(props) {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = React.useState(
+    window.location.pathname === "/"
+      ? 0
+      : listItems.findIndex((item) => window.location.pathname === item.route)
+  );
 
   const handleListItemClick = (event, index) => {
-    console.log(event.target);
     setSelectedIndex(index);
   };
 
@@ -28,7 +31,7 @@ function CMenu(props) {
       aria-label="main mailbox folders"
     >
       {listItems.map((item, index) => (
-        <Link key={index} to={`${item.route}`}>
+        <Link key={index} to={item.route}>
           <CListItem
             text={item.text}
             open={props.open}

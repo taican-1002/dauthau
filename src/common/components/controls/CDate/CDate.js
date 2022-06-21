@@ -1,32 +1,29 @@
-import { useCallback, useState, memo } from "react";
+import React from "react";
 
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
-import { DatePicker } from "@mui/x-date-pickers";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+
 import { Box, TextField } from "@mui/material";
-import dayjs from "dayjs";
-import CFormControl from "../CFormControl/CFormControl"
+// import dayjs from "dayjs";
+import CFormControl from "../CFormControl/CFormControl";
 
-const CDate = ({ value, onChange, error, className, ...props }) => {
-  const [TMP, setTMP] = useState(value);
-
-  const onTMPChange = useCallback((v) => setTMP(v), [TMP]);
-  const onAccept = useCallback((v) => onChange(v.$d), [TMP, onChange]);
-
+const CDate = ({ value, onChange, onAccept, error, className, ...props }) => {
   return (
     <CFormControl error={error} onFormValueChange={(v) => v}>
-      <Box
-        className={classNames("c-datepicker", className, error && "Mui-error")}
-      >
-        <DatePicker
-          allowSameDateSelection
-          value={value}
-          onAccept={onAccept}
-          onChange={onTMPChange}
-          renderInput={(params) => <TextField fullWidth {...params} />}
-          {...props}
-        />
+      <Box className={classNames("c-datepicker", className)}>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <DatePicker
+            allowSameDateSelection
+            value={value}
+            onAccept={onAccept}
+            onChange={onChange}
+            renderInput={(params) => <TextField fullWidth {...params} />}
+            {...props}
+          />
+        </LocalizationProvider>
       </Box>
     </CFormControl>
   );
@@ -39,9 +36,9 @@ CDate.propTypes = {
 
 CDate.defaultProps = {
   error: false,
-  inputFormat: "DD/MM/YYYY",
-  minDate: dayjs("2008-01-01"),
-  maxDate: dayjs(),
+  inputFormat: "dd/MM/yyyy",
+  // minDate: dayjs("2022-06-21"),
+  // maxDate: dayjs(),
 };
 
-export default memo(CDate);
+export default CDate;

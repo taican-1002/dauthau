@@ -45,7 +45,7 @@ const Home = () => {
 
         <Box className="home__content__page">
           {/* <CTable></CTable> */}
-          <CPagination total={50} count={10} color="primary" size="small" />
+          {/* <CPagination total={50} count={10} color="primary" size="small" /> */}
         </Box>
       </Box>
     </Box>

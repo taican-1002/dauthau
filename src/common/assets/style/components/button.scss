@@ -1,8 +1,9 @@
 .MuiButton-root.c-button {
   min-width: 85px;
   border-radius: 5px;
-  font-weight: 500;
-  padding: 11px 18px 10px;
+  font-weight: 400;
+  text-transform: inherit;
+  padding: 9px 17px;
 
   &.hide-on-mobile {
     @include xs {
