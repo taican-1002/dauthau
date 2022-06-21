@@ -12,6 +12,7 @@ import CFilterSelect from "./CFilterSelect";
 import CDuration from "./CDuration";
 import CFormControl from "./CFormControl";
 import CPagination from "./CPagination";
+import CTabs from "./CTabs";
 
 export {
   CButton,
@@ -28,4 +29,5 @@ export {
   CDuration,
   CFormControl,
   CPagination,
+  CTabs,
 };

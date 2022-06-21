@@ -306,16 +306,16 @@ export default function EnhancedTable() {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         /> */}
-        <CPagination
-          onChange={handleChangePage}
-          defaultPage={1}
-          page={page}
-          total={rows.length}
-          count={Math.ceil(rows.length / rowsPerPage)}
-          color="primary"
-          size="small"
-        />
       </Paper>
+      <CPagination
+        onChange={handleChangePage}
+        defaultPage={1}
+        page={page}
+        total={rows.length}
+        count={Math.ceil(rows.length / rowsPerPage)}
+        color="primary"
+        size="small"
+      />
     </Box>
   );
 }
