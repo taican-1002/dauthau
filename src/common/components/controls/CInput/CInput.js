@@ -9,7 +9,7 @@ const StyledInput = styled(OutlinedInput)(({ theme }) => ({
     backgroundColor: "#fff",
     outline: "none",
     borderRadius: "5px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+    // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
     border: "1px solid #BCBFC5",
     fontWeight: "400",
     fontSize: "16px",
