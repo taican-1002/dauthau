@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 const CPagination = ({
-  onChange,
+  handleChangePage,
   page,
   defaultPage,
   total,
@@ -21,8 +21,16 @@ const CPagination = ({
   className,
   color,
   size,
+  value,
+  handleChangePageSize,
+  valueGoToPage,
+  handleGoToPage,
 }) => {
   const valueArr = [
+    {
+      value: 10,
+      name: "10",
+    },
     {
       value: 20,
       name: "20",
@@ -36,13 +44,6 @@ const CPagination = ({
       name: "40",
     },
   ];
-
-  const [value, setValue] = React.useState("");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
   return (
     <Box
       sx={{
@@ -57,7 +58,7 @@ const CPagination = ({
 
       <Stack spacing={2}>
         <Pagination
-          onChange={onChange}
+          onChange={handleChangePage}
           defaultPage={defaultPage}
           count={count}
           page={page}
@@ -70,12 +71,11 @@ const CPagination = ({
 
       <Select
         value={value}
-        onChange={handleChange}
+        onChange={handleChangePageSize}
         displayEmpty
         inputProps={{ "aria-label": "Without label" }}
         sx={{ margin: "0 40px" }}
       >
-        <MenuItem value="">10 / page</MenuItem>
         {valueArr.map((item) => (
           <MenuItem value={item.value} key={item.value}>
             {item.name} / page
@@ -93,7 +93,12 @@ const CPagination = ({
         <Typography variant="span" component="span">
           Go to &nbsp;
         </Typography>
-        <TextField hiddenLabel id="filled-hidden-label-small" size="small" />
+        <TextField
+          hiddenLabel
+          id="go_to_page"
+          size="small"
+          onChange={handleGoToPage}
+        />
       </Box>
     </Box>
   );
@@ -104,6 +109,3 @@ CPagination.propTypes = {
   colsizeor: PropTypes.string,
 };
 export default CPagination;
-{
-  /* <CPagination total={50} count={10} color="primary" size="small" /> */
-}

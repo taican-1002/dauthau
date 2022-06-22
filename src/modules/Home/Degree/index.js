@@ -1,10 +1,14 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import CTable from "../../../common/components/layout/CTable";
 import CInput from "../../../common/components/controls/CInput/CInput";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
 import CTabs from "../../../common/components/controls/CTabs/CTabs";
+
+import TabPanel from "@mui/lab/TabPanel";
+
+import ExternalPersonnel from "./externalPersonnel/externalPersonnel";
+import InternalPersonnel from "./internalPersonnel/internalPersonnel";
 
 const degreeArr = [
   {
@@ -14,17 +18,6 @@ const degreeArr = [
   {
     id: "2",
     name: "Nhân sự ngoài",
-  },
-];
-
-const tableArr = [
-  {
-    id: "1",
-    name: <CTable />,
-  },
-  {
-    id: "2",
-    name: <CTable />,
   },
 ];
 
@@ -51,35 +44,47 @@ const experienceArr = [
 ];
 
 function Degree() {
+  /** Start Nhân viên */
   const [employee, setEmployee] = useState("");
   const onChangeEmployee = (e) => {
     setEmployee(e.target.value);
   };
+  /** End Nhân viên */
 
+  /** Start Chuyên ngành */
   const [specialized, setSpecialized] = useState("");
   const onChangeSpecialized = (e) => {
     setSpecialized(e.target.value);
   };
+  /** End Chuyên ngành */
 
+  /** Start Văn bằng */
   const [diploma, setDiploma] = useState(-1);
   const onChangeDiploma = (e) => {
     setDiploma(e);
   };
+  /** End Văn bằng */
 
+  /** Start Kinh nghiệm */
   const [exp, setExp] = useState(-1);
   const onChangeExp = (e) => {
     setExp(e);
   };
+  /** End Kinh nghiệm */
 
+  /**Start tìm kiếm */
   const handleSearch = () => {
     console.log("searched");
   };
+  /**End tìm kiếm */
 
+  /**Start tabs */
   const [value, setValue] = React.useState("1");
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  /**End tabs */
+
   return (
     <Box>
       <h3 className="title">Danh sách học vấn</h3>
@@ -124,12 +129,14 @@ function Degree() {
           Tìm kiếm
         </CButton>
       </Box>
-      <CTabs
-        value={value}
-        onChange={handleChange}
-        tabPanels={tableArr}
-        tabs={degreeArr}
-      />
+      <CTabs value={value} onChange={handleChange} tabs={degreeArr}>
+        <TabPanel value="1">
+          <ExternalPersonnel />
+        </TabPanel>
+        <TabPanel value="2">
+          <InternalPersonnel />
+        </TabPanel>
+      </CTabs>
     </Box>
   );
 }

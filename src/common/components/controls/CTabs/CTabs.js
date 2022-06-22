@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
+// import TabPanel from "@mui/lab/TabPanel";
 
 export default function LabTabs(props) {
-  const { value, tabs, tabPanels, onChange } = props;
+  const { value, tabs, children, onChange } = props;
 
   return (
     <Box sx={{ width: "100%", typography: "body1", marginTop: "20px" }}>
@@ -19,12 +19,13 @@ export default function LabTabs(props) {
               ))}
           </TabList>
         </Box>
-        {tabPanels &&
+        {/* {tabPanels &&
           tabPanels.map((item) => (
             <TabPanel value={item.id} key={item.id}>
               {item.name}
             </TabPanel>
-          ))}
+          ))} */}
+        {children}
       </TabContext>
     </Box>
   );
