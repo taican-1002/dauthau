@@ -4,6 +4,8 @@ import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
 
+import ModalDetail from "./ModalDetail";
+
 const financialYearArr = [
   {
     id: 1,
@@ -72,6 +74,7 @@ function Finance() {
           Tìm kiếm
         </CButton>
       </Box>
+      <ModalDetail></ModalDetail>
       <CTable></CTable>
     </Box>
   );

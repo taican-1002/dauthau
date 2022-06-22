@@ -33,7 +33,7 @@ function Asset() {
   };
   return (
     <Box>
-      <h3 className="title">Danh sách báo cáo tài chính</h3>
+      <h3 className="title">Danh sách máy móc thiết bị</h3>
       <Box
         sx={{
           display: "flex",

@@ -20,7 +20,9 @@ function CForm({
     handleCloseModal,
     addForm,
     children,
-    className
+    className,
+    minWidthForm,
+    isHiddenAddMuti
 }) {
   return (
     <Modal
@@ -30,7 +32,9 @@ function CForm({
         aria-describedby="modal-modal-description"
         className='form'
     >
-        <Box className='form__wrap'>
+        <Box className='form__wrap'
+            sx={{minWidth: minWidthForm || '80%'}}
+        >
             <CLabel>
                 <span>{label}</span>
             </CLabel>
@@ -41,14 +45,21 @@ function CForm({
                 {children}
             </Box>
 
-            <Box className='form__wrap__actions'>
-                <Box>
-                    <CIconButton 
-                        className='button-addnew'
-                    >
-                        <AddIcon onClick={addForm}/>
-                    </CIconButton>
-                </Box>
+            <Box className='form__wrap__actions'
+                sx= {{justifyContent: isHiddenAddMuti && 'flex-end'}}
+            >
+                {
+                    isHiddenAddMuti ? '' : (
+                        <Box>
+                            <CIconButton 
+                                className='button-addnew'
+                            >
+                                <AddIcon onClick={addForm}/>
+                            </CIconButton>
+                        </Box>
+                    )
+                }
+                
                 <Box>
                     <CButton className='form__wrap__actions__cancel' onClick={handleCloseModal}>Hủy</CButton>
                     <CButton className='form__wrap__actions__save'>Lưu</CButton>

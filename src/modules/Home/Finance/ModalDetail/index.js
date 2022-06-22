@@ -13,6 +13,7 @@ import {Box, Grid, Paper} from '@mui/material';
 import CForm from '../../../../common/components/controls/CForm/CForm'
 import CIconButton from '../../../../common/components/controls/CIconButton/CIconButton';
 import InfoItem from './InfoModalItem';
+import ExportTable from './ExportTable';
 
 function ModalDetail() {
 
@@ -20,11 +21,15 @@ function ModalDetail() {
     const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
     const handleClose = () => setOpen(false);
 
+    const [openExport, setOpenExport] = React.useState(false);
+    const handleOpenExport = () => {setOpenExport(true); console.log('hdsahdhsa')};
+    const handleCloseExport = () => setOpenExport(false);
+
     return (
         <div id='asset' className='degree__modal-detail'>
             <Box className='button-open-modal'>
                 <CIconButton 
-                    onOpenModal={handleOpen}
+                    onOpenModal={handleOpenExport}
                     className='button-export-newfile'
                 >
                     <FileIcon/>
@@ -56,13 +61,21 @@ function ModalDetail() {
             </Box>
             
             <CForm
-                label='Thêm máy móc thiết bị'
+                label='Báo cáo tài chính'
                 isOpen = {open}
                 className='manual'
                 handleCloseModal = {handleClose}
-                isHiddenAddMuti = {true}
             >
                 <InfoItem/>
+            </CForm>
+
+            <CForm
+                label='Báo cáo tài chính'
+                isOpen = {openExport}
+                className='manual'
+                handleCloseModal = {handleCloseExport}
+            >
+                <ExportTable></ExportTable>
             </CForm>
         </div>
     )

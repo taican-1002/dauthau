@@ -32,8 +32,24 @@
         width: 316px;
         height: 28px;
         padding: 10px 20px;
+        border: 1px solid #BCBFC5;
     }
 
+    #info-item &__input .type-device {
+        display: flex;
+        justify-content: space-between;
+        width: 356px;
+    }
+
+    #info-item &__input .type-device .MuiSelect-select {
+        width: 100%;
+    }
+
+    #info-item &__input .type-device > .MuiOutlinedInput-root {
+        flex: 1;
+
+    }
+    
     #info-item &__input .MuiTextarea-textarea {
         min-width: 356px;
         max-width: 356px;
@@ -42,19 +58,32 @@
         font-size: 16px;
         line-height: 100%;
         align-items: center;
+        border-radius: 4px;
+        line-height: 28px;
     }
 
     #info-item &__input .input-date {
         width: 356px;
         height: 48px;
-
+        
         .MuiInputBase-input {
             height: 48px;
             box-sizing: border-box;
         }
     }
-
+    
+    #info-item &__input input[type='file'] {
+        width: 356px;
+        height: 48px;
+        box-sizing: border-box;
+        border: 1px solid #BCBFC5;
+    }
+    
     .MuiGrid-root.MuiGrid-item:last-child &__input {
         padding-bottom: 20px;
     }
+}
+
+.form .modal-device {
+    height: unset;
 }
