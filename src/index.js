@@ -6,6 +6,8 @@ import ReactDOM from "react-dom";
 import App from "./app";
 import reportWebVitals from "./reportWebVitals";
 
+require("./ultils/axios/mock/index");
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

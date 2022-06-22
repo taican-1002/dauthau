@@ -22,6 +22,10 @@ function ModalDetail() {
     const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
     const handleClose = () => setOpen(false);
 
+    const [openDelete, setOpenDelete] = React.useState(false);
+    const handleOpenDelete = () => {setOpenDelete(true); console.log('hdsahdhsa')};
+    const handleCloseDelete = () => setOpenDelete(false);
+
     const handleAddForm = () => {
         setNewForm([...forms, '1'])
     }
@@ -54,7 +58,7 @@ function ModalDetail() {
                     <UpdateIcon/>
                 </CIconButton>
                 <CIconButton 
-                    onOpenModal={handleOpen}
+                    onOpenModal={handleOpenDelete}
                     className='button-delete disabled'
                 >
                     <DeleteIcon/>
@@ -73,6 +77,19 @@ function ModalDetail() {
                         <InfoItem/>
                     ))
                 }
+            </CForm>
+
+            <CForm
+                label='Xóa chứng chỉ nhân sự'
+                isOpen = {openDelete}
+                handleCloseModal = {handleCloseDelete}
+                addForm = {handleOpenDelete}
+                minWidthForm='617px'
+                isHiddenAddMuti = {true}
+                nameAction = 'Xóa'
+                className = 'manual modal-device'
+            >
+                <h3 style={{ fontSize: 24 }}>Bạn có chắc chắn muốn xóa không?</h3>
             </CForm>
         </div>
     )

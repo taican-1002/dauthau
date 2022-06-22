@@ -6,6 +6,9 @@ import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
 import CInput from "../../../common/components/controls/CInput/CInput";
+
+import axios from 'axios';
+
 import baseReq from "../../../apis/baseReq";
 const headCells = [
   {
@@ -123,15 +126,25 @@ function Asset() {
 
   useEffect(() => {
     /**Start get all assets */
-    baseReq
-      .get("assets?_page=" + page + "&_limit=" + rowsPerPage)
-      .then((response) => {
-        setRows(response.data);
-        setTotalRows(2);
+    // baseReq
+    //   .get("assets?_page=" + page + "&_limit=" + rowsPerPage)
+    //   .then((response) => {
+    //     setRows(response.data);
+    //     setTotalRows(2);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    axios.get("/asset")
+      .then(function (response) {
+        setRows(response.data.assets.assets);
+        setTotalRows(11);
       })
       .catch(function (error) {
         console.log(error);
       });
+
     /**End get all assets */
 
     /**Start set go to page */

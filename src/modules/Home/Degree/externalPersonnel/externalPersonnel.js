@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
 import CTable from "../../../../common/components/layout/CTable";
 
+import axios from 'axios';
+
 import baseReq from "../../../../apis/baseReq";
 import { Checkbox, TableCell, TableRow } from "@mui/material";
 
@@ -89,15 +91,26 @@ const ExternalPersonnel = () => {
 
   useEffect(() => {
     /**Start get externalPerconnel degrees */
-    baseReq
-      .get("degrees?_page=" + page)
-      .then((response) => {
-        setRows(response.data);
-        setTotalRows(2);
+    // baseReq
+    //   .get("degrees?_page=" + page)
+    //   .then((response) => {
+    //     setRows(response.data);
+    //     setTotalRows(2);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    // Mock api
+    axios.get("/degree")
+      .then(function (response) {
+        setRows(response.data.degrees.degrees);
+        setTotalRows(11);
       })
       .catch(function (error) {
         console.log(error);
       });
+
     /**End get externalPerconnel degrees */
     /**Start set go to page */
     const goToPage = document.querySelector("#go_to_page");

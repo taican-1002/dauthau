@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
 import CTable from "../../../../common/components/layout/CTable";
 
+import axios from 'axios';
+
 import baseReq from "../../../../apis/baseReq";
 import { Checkbox, TableCell, TableRow } from "@mui/material";
 
@@ -89,15 +91,26 @@ const InternalPersonnel = () => {
 
   useEffect(() => {
     /**Start get externalPerconnel certificates */
-    baseReq
-      .get("certificates?_page=" + page + "&_limit=" + rowsPerPage)
-      .then((response) => {
-        setRows(response.data);
-        setTotalRows(2);
+    // baseReq
+    //   .get("certificates?_page=" + page + "&_limit=" + rowsPerPage)
+    //   .then((response) => {
+    //     setRows(response.data);
+    //     setTotalRows(2);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    // Mock api
+    axios.get("/certificate")
+      .then(function (response) {
+        setRows(response.data.certificates.certificates);
+        setTotalRows(11);
       })
       .catch(function (error) {
         console.log(error);
       });
+
     /**Start set go to page */
     const goToPage = document.querySelector("#go_to_page");
     goToPage.value = page;

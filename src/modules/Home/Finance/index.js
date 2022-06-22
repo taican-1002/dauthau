@@ -4,6 +4,7 @@ import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
 import ModalDetail from "./ModalDetail";
+import axios from 'axios';
 
 import baseReq from "../../../apis/baseReq";
 
@@ -140,10 +141,20 @@ function Finance() {
 
   useEffect(() => {
     /**Start get all finance */
-    baseReq
-      .get("finance?_page=" + page + "&_limit=" + rowsPerPage)
-      .then((response) => {
-        setRows(response.data);
+    // baseReq
+    //   .get("finance?_page=" + page + "&_limit=" + rowsPerPage)
+    //   .then((response) => {
+    //     console.log(response.data)
+    //     setRows(response.data);
+    //     setTotalRows(11);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+      axios.get("/finance")
+      .then(function (response) {
+        setRows(response.data.finances.finances);
         setTotalRows(11);
       })
       .catch(function (error) {

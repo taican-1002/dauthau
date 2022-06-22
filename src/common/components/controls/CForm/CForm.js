@@ -22,7 +22,8 @@ function CForm({
     children,
     className,
     minWidthForm,
-    isHiddenAddMuti
+    isHiddenAddMuti,
+    nameAction
 }) {
   return (
     <Modal
@@ -52,9 +53,10 @@ function CForm({
                     isHiddenAddMuti ? '' : (
                         <Box>
                             <CIconButton 
+                                onOpenModal={addForm}
                                 className='button-addnew'
                             >
-                                <AddIcon onClick={addForm}/>
+                                <AddIcon/>
                             </CIconButton>
                         </Box>
                     )
@@ -62,7 +64,7 @@ function CForm({
                 
                 <Box>
                     <CButton className='form__wrap__actions__cancel' onClick={handleCloseModal}>Hủy</CButton>
-                    <CButton className='form__wrap__actions__save'>Lưu</CButton>
+                    <CButton className='form__wrap__actions__save'>{nameAction || 'Lưu'}</CButton>
                 </Box>
             </Box>
         </Box>

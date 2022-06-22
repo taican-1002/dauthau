@@ -1,0 +1,50 @@
+{
+  "degrees": [
+    {
+      "id": 1,
+      "name": "Nguyễn Quốc Tiến",
+      "email": "tiennq@gmail.com",
+      "degrees": [
+        {
+          "academic_rank": "Đại học",
+          "major": "Cầu đường",
+          "school_name": "Trường Đại học Giao thông vận tải - Cơ sở II",
+          "effective_date": "30/12/2003",
+          "address": "234 Ngô Tất Tố",
+          "experience": "16 năm"
+        },
+        {
+          "academic_rank": "Thạc sĩ",
+          "major": "Cầu đường",
+          "school_name": "Trường Đại học Giao thông vận tải - Cơ sở II",
+          "effective_date": "30/12/2003",
+          "address": "234 Ngô Tất Tố",
+          "experience": "16 năm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Văn A",
+      "email": "anguyen@gmail.com",
+      "degrees": [
+        {
+          "academic_rank": "Cao đẳng",
+          "major": "Giao thông",
+          "school_name": "Trường Cao đẳng Giao thông vận tải - Cơ sở II",
+          "effective_date": "30/12/2003",
+          "address": "290 Ngô Tất Tố",
+          "experience": "16 năm"
+        },
+        {
+          "academic_rank": "Thạc sĩ",
+          "major": "Cầu đường",
+          "school_name": "Trường Cao đẳng Giao thông vận tải - Cơ sở II",
+          "effective_date": "30/12/2003",
+          "address": "290 Ngô Tất Tố",
+          "experience": "16 năm"
+        }
+      ]
+    }
+  ]
+}
