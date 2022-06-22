@@ -58,9 +58,10 @@ function ModalDetail() {
             <CForm
                 label='Thêm máy móc thiết bị'
                 isOpen = {open}
+                className='manual'
                 handleCloseModal = {handleClose}
             >
-                <InfoItem isInfoName={true}/>
+                <InfoItem/>
             </CForm>
         </div>
     )

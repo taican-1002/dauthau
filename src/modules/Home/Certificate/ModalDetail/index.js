@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {
     AddCircleOutlineOutlined as AddIcon,
@@ -16,9 +16,15 @@ import InfoItem from './InfoModalItem';
 
 function ModalDetail() {
 
+    const [forms, setNewForm] = useState([])
+
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
     const handleClose = () => setOpen(false);
+
+    const handleAddForm = () => {
+        setNewForm([...forms, '1'])
+    }
 
     return (
         <div className='degree__modal-detail'>
@@ -59,9 +65,14 @@ function ModalDetail() {
                 label='Chi tiết chứng chỉ nhân sự'
                 isOpen = {open}
                 handleCloseModal = {handleClose}
+                addForm = {handleAddForm}
             >
                 <InfoItem isInfoName={true}/>
-                <InfoItem/>
+                {
+                    forms.map((item) => (
+                        <InfoItem/>
+                    ))
+                }
             </CForm>
         </div>
     )

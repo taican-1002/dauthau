@@ -21,9 +21,11 @@
 html body {
   background-color: $color-background;
 
+  // Color * required
   .required-input {
     color: #DC3545;
   }
+
   
   .button-open-modal {
     display: flex;
@@ -34,6 +36,7 @@ html body {
     }
   }
 
+  // Button add, delete, update, export file, send mail
   .button-addnew,
   .button-export-newfile,
   .button-sendemail {
@@ -77,6 +80,18 @@ html body {
 
   .button-delete:hover {
     background-color: #c44545;
+  }
+
+  // Form manual
+  .manual {
+    height: unset;
+    overflow-y: unset;
+
+    .info-item {
+      border: none;
+
+      margin-bottom: 0;
+    }
   }
   
 }

@@ -7,6 +7,8 @@ import {
 
 } from '@mui/icons-material';
 
+import classNames from "classnames";
+
 import CLabel from '../../others/CLabel'
 import CButton from '../CButton/CButton';
 
@@ -16,7 +18,9 @@ function CForm({
     label,
     isOpen,
     handleCloseModal,
-    children
+    addForm,
+    children,
+    className
 }) {
   return (
     <Modal
@@ -31,7 +35,9 @@ function CForm({
                 <span>{label}</span>
             </CLabel>
 
-            <Box className='form__wrap__body'>
+            <Box
+                className={classNames("form__wrap__body", className)}
+            >
                 {children}
             </Box>
 
@@ -40,7 +46,7 @@ function CForm({
                     <CIconButton 
                         className='button-addnew'
                     >
-                        <AddIcon/>
+                        <AddIcon onClick={addForm}/>
                     </CIconButton>
                 </Box>
                 <Box>

@@ -13,36 +13,26 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-function InfoItem({
-    isInfoName
-}) {
+function InfoItem() {
+
+    const [fromDate, setFromDate] = React.useState("");
+      const onChangeFromDate = (value) => {
+        setFromDate(value);
+        // console.log(dayjs(value).format("DD/MM/YYYY"));
+    };
+
+    const [toDate, setToDate] = React.useState("");
+    const onChangeToDate = (value) => {
+        setToDate(value);
+    };
+
   return (
     <Box id='info-item' className='info-item'>
         <Grid container spacing={2}>
-            {
-                isInfoName ? (<>
-                    <Grid item xs={6}>
-                        <Box className='info-item__input'>
-                            <p>
-                                Nhân sự<span className='required-input'> *</span>
-                            </p>
-                            <CInput/>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Box className='info-item__input'>
-                            <p>
-                                Email<span className='required-input'> *</span>
-                            </p>
-                            <CInput/>
-                        </Box>
-                    </Grid>
-                </>) : ''
-            }
             <Grid item xs={6}>
                 <Box className='info-item__input'>
                     <p>
-                        Tên chứng chỉ<span className='required-input'> *</span>
+                        Tên hạng mục<span className='required-input'> *</span>
                     </p>
                     <CInput/>
                 </Box>
@@ -50,31 +40,7 @@ function InfoItem({
             <Grid item xs={6}>
                 <Box className='info-item__input'>
                     <p>
-                        Năm cấp CCHN<span className='required-input'> *</span>
-                    </p>
-                    {/* <CDate onChange={()=>{}} /> */}
-                </Box>
-            </Grid>
-            <Grid item xs={6}>
-                <Box className='info-item__input'>
-                    <p>
-                        Số CCHN<span className='required-input'> *</span>
-                    </p>
-                    <CInput/>
-                </Box>
-            </Grid>
-            <Grid item xs={6}>
-                <Box className='info-item__input'>
-                    <p>
-                        Ngày hết hạn
-                    </p>
-                    {/* <CDate/> */}
-                </Box>
-            </Grid>
-            <Grid item xs={6}>
-                <Box className='info-item__input'>
-                    <p>
-                        Hạng<span className='required-input'> *</span>
+                        Loại Thiết bị<span className='required-input'> *</span>
                     </p>
                     <CSelect/>
                 </Box>
@@ -82,7 +48,7 @@ function InfoItem({
             <Grid item xs={6}>
                 <Box className='info-item__input'>
                     <p>
-                        Thời gian hiệu lực<span className='required-input'> *</span>                
+                        Số lượng<span className='required-input'> *</span>
                     </p>
                     <CInput/>
                 </Box>
@@ -90,7 +56,51 @@ function InfoItem({
             <Grid item xs={6}>
                 <Box className='info-item__input'>
                     <p>
-                        Ghi chú
+                        Số hợp đồng
+                    </p>
+                    <CDate
+                        value={fromDate}
+                        onChange={onChangeFromDate}
+                        className="input-date"
+                    />
+                </Box>
+            </Grid>
+            <Grid item xs={6}>
+                <Box className='info-item__input'>
+                    <p>
+                        Ngày ký
+                    </p>
+                    <CDate
+                        value={fromDate}
+                        onChange={onChangeFromDate}
+                        className="input-date"
+                    />
+                </Box>
+            </Grid>
+            <Grid item xs={6}>
+                <Box className='info-item__input'>
+                    <p>
+                        Hình ảnh thiết bị
+                    </p>
+                    <CDate
+                        value={fromDate}
+                        onChange={onChangeFromDate}
+                        className="input-date"
+                    />
+                </Box>
+            </Grid>
+            <Grid item xs={6}>
+                <Box className='info-item__input'>
+                    <p>
+                        Giấy kiểm định
+                    </p>
+                    <CSelect/>
+                </Box>
+            </Grid>
+            <Grid item xs={6}>
+                <Box className='info-item__input'>
+                    <p>
+                        Số hóa đơn                
                     </p>
                     <CInput/>
                 </Box>
@@ -98,7 +108,15 @@ function InfoItem({
             <Grid item xs={6}>
                 <Box className='info-item__input'>
                     <p>
-                        File đính kèm
+                        File hợp đồng
+                    </p>
+                    <CInput/>
+                </Box>
+            </Grid>
+            <Grid item xs={6}>
+                <Box className='info-item__input'>
+                    <p>
+                        Mô tả
                     </p>
                     <CInput/>
                 </Box>

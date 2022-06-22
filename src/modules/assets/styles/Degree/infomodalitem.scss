@@ -18,8 +18,8 @@
         padding-bottom: 19px;
 
         .MuiInputBase-input {
-            width: 316px;
-            height: 27px;
+            width: 333.4px;
+            height: 25.4px;
         }
 
         &.disable-input .MuiInputBase-input{
@@ -28,9 +28,30 @@
 
     }
 
-    #info-item &__input .MuiSelect-select {
-        height: 27px;
+    #info-item &__input .MuiSelect-select{
+        width: 316px;
+        height: 28px;
         padding: 10px 20px;
+    }
+
+    #info-item &__input .MuiTextarea-textarea {
+        min-width: 356px;
+        max-width: 356px;
+        height: 48px;
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 100%;
+        align-items: center;
+    }
+
+    #info-item &__input .input-date {
+        width: 356px;
+        height: 48px;
+
+        .MuiInputBase-input {
+            height: 48px;
+            box-sizing: border-box;
+        }
     }
 
     .MuiGrid-root.MuiGrid-item:last-child &__input {
