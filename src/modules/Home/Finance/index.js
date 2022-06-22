@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
+import ModalDetail from "./ModalDetail";
 
 import baseReq from "../../../apis/baseReq";
 
@@ -41,6 +42,7 @@ const headCells = [
     name: "Tờ khai quyết thuế",
   },
 ];
+
 const financialYearArr = [
   {
     id: 1,
@@ -185,6 +187,7 @@ function Finance() {
           Tìm kiếm
         </CButton>
       </Box>
+      <ModalDetail></ModalDetail>
       <CTable
         headCells={headCells}
         rows={rows}

@@ -1,5 +1,7 @@
 import { Box, Checkbox, TableCell, TableRow } from "@mui/material";
 import React, { useState, useEffect } from "react";
+
+import ModalDetail from "./ModalDetail";
 import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
@@ -139,7 +141,7 @@ function Asset() {
   }, [page, rowsPerPage]);
   return (
     <Box>
-      <h3 className="title">Danh sách báo cáo tài chính</h3>
+      <h3 className="title">Danh sách máy móc thiết bị</h3>
       <Box
         sx={{
           display: "flex",
@@ -168,6 +170,8 @@ function Asset() {
           Tìm kiếm
         </CButton>
       </Box>
+      <ModalDetail />
+
       <CTable
         headCells={headCells}
         rows={rows}

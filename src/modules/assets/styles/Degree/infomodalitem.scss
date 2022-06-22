@@ -1,0 +1,89 @@
+.info-item {
+    border: 1px solid $color-primary;
+    padding: 20px 51.5px 0;
+    margin-bottom: 30px;
+    
+    .MuiGrid-root.MuiGrid-item:nth-child(2n + 1) {
+        padding-right: 43.5px;
+    }
+
+    .MuiGrid-root.MuiGrid-item:nth-child(2n) {
+        padding-left: 43.5px;
+    }
+
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 19px;
+
+        .MuiInputBase-input {
+            width: 333.4px;
+            height: 25.4px;
+        }
+
+        &.disable-input .MuiInputBase-input{
+            background-color: $color-disable-input;
+        }
+
+    }
+
+    #info-item &__input .MuiSelect-select{
+        width: 316px;
+        height: 28px;
+        padding: 10px 20px;
+        border: 1px solid #BCBFC5;
+    }
+
+    #info-item &__input .type-device {
+        display: flex;
+        justify-content: space-between;
+        width: 356px;
+    }
+
+    #info-item &__input .type-device .MuiSelect-select {
+        width: 100%;
+    }
+
+    #info-item &__input .type-device > .MuiOutlinedInput-root {
+        flex: 1;
+
+    }
+    
+    #info-item &__input .MuiTextarea-textarea {
+        min-width: 356px;
+        max-width: 356px;
+        height: 48px;
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 100%;
+        align-items: center;
+        border-radius: 4px;
+        line-height: 28px;
+    }
+
+    #info-item &__input .input-date {
+        width: 356px;
+        height: 48px;
+        
+        .MuiInputBase-input {
+            height: 48px;
+            box-sizing: border-box;
+        }
+    }
+    
+    #info-item &__input input[type='file'] {
+        width: 356px;
+        height: 48px;
+        box-sizing: border-box;
+        border: 1px solid #BCBFC5;
+    }
+    
+    .MuiGrid-root.MuiGrid-item:last-child &__input {
+        padding-bottom: 20px;
+    }
+}
+
+.form .modal-device {
+    height: unset;
+}

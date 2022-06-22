@@ -1,5 +1,6 @@
-import { Box } from "@mui/material";
 import React, { useState } from "react";
+import ModalDetail from "./ModalDetail";
+import { Box } from "@mui/material";
 import CInput from "../../../common/components/controls/CInput/CInput";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
@@ -136,6 +137,8 @@ function Certificate() {
           Tìm kiếm
         </CButton>
       </Box>
+      <ModalDetail />
+
       <CTabs value={value} onChange={handleChange} tabs={certificateArr}>
         <TabPanel value="1">
           <ExternalPersonnel />

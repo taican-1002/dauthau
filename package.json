@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
     "dayjs": "^1.11.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

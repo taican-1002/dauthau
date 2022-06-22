@@ -2,7 +2,8 @@ import React from 'react'
 
 import { AppBar as MuiAppBar,
          Toolbar,
-         Box
+         Box,
+         IconButton
 } from '@mui/material';
 
 import { styled } from "@mui/material/styles";
@@ -13,7 +14,6 @@ import { Search as SearchIcon,
 } from '@mui/icons-material';
 
 import CInput from '../controls/CInput/CInput';
-import CIconButton from '../controls/CIconButton/CIconButton';
 import CButton from '../controls/CButton/CButton';
 import CInfoUser from '../controls/InfoUser/CInfoUser';
 
@@ -55,9 +55,9 @@ function CHeader(props) {
             </Box>
             <Box className='header__info'>
                 <Box className='header__info__noti'>
-                    <CIconButton>
+                    <IconButton>
                         <NotificationsIcon/>
-                    </CIconButton>
+                    </IconButton>
                 </Box>
                 <CInfoUser/>
             </Box>

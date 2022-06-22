@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import ModalDetail from "./ModalDetail";
 import CInput from "../../../common/components/controls/CInput/CInput";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
@@ -129,6 +130,7 @@ function Degree() {
           Tìm kiếm
         </CButton>
       </Box>
+      <ModalDetail />
       <CTabs value={value} onChange={handleChange} tabs={degreeArr}>
         <TabPanel value="1">
           <ExternalPersonnel />
