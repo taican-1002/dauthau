@@ -4,11 +4,13 @@ import React from "react";
 import { Container, Grid, TextField, Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
   const handleLogin = () => {
     navigate("/degree");
+    toast.success("Login thành công!");
   };
   return (
     <div className="login">
