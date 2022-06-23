@@ -21,6 +21,10 @@ function ModalDetail() {
     const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
     const handleClose = () => setOpen(false);
 
+    const [openDelete, setOpenDelete] = React.useState(false);
+    const handleOpenDelete = () => {setOpenDelete(true); console.log('hdsahdhsa')};
+    const handleCloseDelete = () => setOpenDelete(false);
+
     const [openExport, setOpenExport] = React.useState(false);
     const handleOpenExport = () => {setOpenExport(true); console.log('hdsahdhsa')};
     const handleCloseExport = () => setOpenExport(false);
@@ -48,13 +52,13 @@ function ModalDetail() {
                 </CIconButton>
                 <CIconButton 
                     onOpenModal={handleOpen}
-                    className='button-update disabled'
+                    className='button-update'
                 >
                     <UpdateIcon/>
                 </CIconButton>
                 <CIconButton 
                     onOpenModal={handleOpen}
-                    className='button-delete disabled'
+                    className='button-delete'
                 >
                     <DeleteIcon/>
                 </CIconButton>
@@ -76,6 +80,20 @@ function ModalDetail() {
                 handleCloseModal = {handleCloseExport}
             >
                 <ExportTable></ExportTable>
+            </CForm>
+
+            {/* Form Delete */}
+            <CForm
+                label='Xóa báo cáo tài chính'
+                isOpen = {openDelete}
+                handleCloseModal = {handleCloseDelete}
+                addForm = {handleOpenDelete}
+                minWidthForm='617px'
+                isHiddenAddMuti = {true}
+                nameAction = 'Xóa'
+                className = 'manual modal-device'
+            >
+                <h3 style={{ fontSize: 24 }}>Bạn có chắc chắn muốn xóa không?</h3>
             </CForm>
         </div>
     )

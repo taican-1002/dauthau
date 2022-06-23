@@ -59,7 +59,7 @@ function ModalDetail() {
                 </CIconButton>
                 <CIconButton 
                     onOpenModal={handleOpenDelete}
-                    className='button-delete disabled'
+                    className='button-delete'
                 >
                     <DeleteIcon/>
                 </CIconButton>
