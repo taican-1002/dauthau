@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import CTable from "../../../../common/components/layout/CTable";
 
-import axios from 'axios';
+import axios from "axios";
 
 import baseReq from "../../../../apis/baseReq";
 import { Checkbox, TableCell, TableRow } from "@mui/material";
@@ -102,7 +102,8 @@ const ExternalPersonnel = () => {
     //   });
 
     // Mock api
-    axios.get("/degree")
+    axios
+      .get("/degree")
       .then(function (response) {
         setRows(response.data.degrees.degrees);
         setTotalRows(11);
@@ -140,7 +141,7 @@ const ExternalPersonnel = () => {
             <Fragment key={index}>
               <TableRow
                 hover
-                onClick={(event) => handleClick(event, row.name)}
+                onClick={(event) => handleClick(event, row)}
                 role="checkbox"
                 aria-checked={isItemSelected}
                 tabIndex={-1}
