@@ -162,8 +162,9 @@ function Asset() {
           alignItems: "center",
           width: "100%",
           gap: "20px",
-          margin: "20px 0",
+          padding: "20px 0",
           flexWrap: "wrap",
+          borderBottom: "1px solid #D9D9D9",
         }}
       >
         <CSelect
