@@ -6,25 +6,10 @@ import ReactDOM from "react-dom";
 import App from "./app";
 import reportWebVitals from "./reportWebVitals";
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 require("./ultils/axios/mock/index");
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToastContainer
-      position="top-right"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      // theme="colored"
-    />
     <App />
   </React.StrictMode>,
   document.getElementById("root")
