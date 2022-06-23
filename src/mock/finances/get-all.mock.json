@@ -11,8 +11,11 @@
       "turnOver": "3.000.000",
       "profitBeforeTax": "1.500.000",
       "profitAfterTax": "3.000.000",
-      "declaration": "taichinh.xlsx",
-      "pathDeclaration": "http://taichinh.com.vn.org.net"
+      "tax_final_declaration": "taichinh.xlsx",
+      "path_tax_final_declaration": "http://taichinh.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 2,
@@ -25,8 +28,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhFPT.xlsx",
-      "pathDeclaration": "http://taichinhFPT.com.vn.org.net"
+      "tax_final_declaration": "taichinhFPT.xlsx",
+      "path_tax_final_declaration": "http://taichinhFPT.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 3,
@@ -39,8 +45,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhTMA.xlsx",
-      "pathDeclaration": "http://taichinhTMA.com.vn.org.net"
+      "tax_final_declaration": "taichinhTMA.xlsx",
+      "path_tax_final_declaration": "http://taichinhTMA.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 4,
@@ -53,8 +62,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhAMW.xlsx",
-      "pathDeclaration": "http://taichinhAMW.com.vn.org.net"
+      "tax_final_declaration": "taichinhAMW.xlsx",
+      "path_tax_final_declaration": "http://taichinhAMW.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 5,
@@ -67,8 +79,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhMOB.xlsx",
-      "pathDeclaration": "http://taichinhMOB.com.vn.org.net"
+      "tax_final_declaration": "taichinhMOB.xlsx",
+      "path_tax_final_declaration": "http://taichinhMOB.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 6,
@@ -81,8 +96,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhLOV.xlsx",
-      "pathDeclaration": "http://taichinhLOV.com.vn.org.net"
+      "tax_final_declaration": "taichinhLOV.xlsx",
+      "path_tax_final_declaration": "http://taichinhLOV.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 7,
@@ -95,8 +113,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhMNU.xlsx",
-      "pathDeclaration": "http://taichinhMNU.com.vn.org.net"
+      "tax_final_declaration": "taichinhMNU.xlsx",
+      "path_tax_final_declaration": "http://taichinhMNU.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 8,
@@ -109,8 +130,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhAZV.xlsx",
-      "pathDeclaration": "http://taichinhAZV.com.vn.org.net"
+      "tax_final_declaration": "taichinhAZV.xlsx",
+      "path_tax_final_declaration": "http://taichinhAZV.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 9,
@@ -123,8 +147,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhGIH.xlsx",
-      "pathDeclaration": "http://taichinhGIH.com.vn.org.net"
+      "tax_final_declaration": "taichinhGIH.xlsx",
+      "path_tax_final_declaration": "http://taichinhGIH.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 10,
@@ -137,8 +164,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhQEU.xlsx",
-      "pathDeclaration": "http://taichinhQEU.com.vn.org.net"
+      "tax_final_declaration": "taichinhQEU.xlsx",
+      "path_tax_final_declaration": "http://taichinhQEU.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     },
     {
       "id": 11,
@@ -151,8 +181,11 @@
       "turnOver": "3.600.000",
       "profitBeforeTax": "3.500.000",
       "profitAfterTax": "4.000.000",
-      "declaration": "taichinhBUXS.xlsx",
-      "pathDeclaration": "http://taichinhBUXS.com.vn.org.net"
+      "tax_final_declaration": "taichinhBUXS.xlsx",
+      "path_tax_final_declaration": "http://taichinhBUXS.com.vn.org.net",
+      "elec_tax_final_declaration": "taichinh.xlsx",
+      "confirm_form": "taichinh.xlsx",
+      "file_financial_statement": "taichinh.xlsx"
     }
   ]
 }

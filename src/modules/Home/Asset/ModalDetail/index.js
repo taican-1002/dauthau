@@ -1,28 +1,26 @@
-import React from 'react'
+import React from "react";
 
 import {
-    AddCircleOutlineOutlined as AddIcon,
-    DeleteOutlined as DeleteIcon,
-    SettingsOutlined as UpdateIcon,
-    EmailOutlined as EmailIcon,
-    InsertDriveFileOutlined as FileIcon
-} from '@mui/icons-material';
+  AddCircleOutlineOutlined as AddIcon,
+  DeleteOutlined as DeleteIcon,
+  SettingsOutlined as UpdateIcon,
+  EmailOutlined as EmailIcon,
+  InsertDriveFileOutlined as FileIcon,
+} from "@mui/icons-material";
 
-import {Box, Grid, Paper} from '@mui/material';
+import { Box, Grid, Paper } from "@mui/material";
 
-import CForm from '../../../../common/components/controls/CForm/CForm'
-import CIconButton from '../../../../common/components/controls/CIconButton/CIconButton';
-import InfoItem from './InfoModalItem';
+import CForm from "../../../../common/components/controls/CForm/CForm";
+import CIconButton from "../../../../common/components/controls/CIconButton/CIconButton";
+import InfoItem from "./InfoModalItem";
 
 function ModalDetail() {
-
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
-    const handleClose = () => setOpen(false);
-
-    const [openDelete, setOpenDelete] = React.useState(false);
-    const handleOpenDelete = () => {setOpenDelete(true); console.log('hdsahdhsa')};
-    const handleCloseDelete = () => setOpenDelete(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+    console.log("hdsahdhsa");
+  };
+  const handleClose = () => setOpen(false);
 
     return (
         <div id='asset' className='degree__modal-detail'>
@@ -87,4 +85,4 @@ function ModalDetail() {
     )
 }
 
-export default ModalDetail
+export default ModalDetail;

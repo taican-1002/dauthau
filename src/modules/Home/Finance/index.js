@@ -4,7 +4,7 @@ import CTable from "../../../common/components/layout/CTable";
 import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect";
 import CButton from "../../../common/components/controls/CButton/CButton";
 import ModalDetail from "./ModalDetail";
-import axios from 'axios';
+import axios from "axios";
 
 import baseReq from "../../../apis/baseReq";
 
@@ -40,7 +40,16 @@ const headCells = [
     name: "Lợi nhuận sau thuế",
   },
   {
-    name: "Tờ khai quyết thuế",
+    name: "Tờ khai quyết toán thuế",
+  },
+  {
+    name: "Tờ khai quyết toán thuế điện tử",
+  },
+  {
+    name: "Văn bảng xác nhận",
+  },
+  {
+    name: "File báo cáo tài chính",
   },
 ];
 
@@ -152,7 +161,8 @@ function Finance() {
     //     console.log(error);
     //   });
 
-      axios.get("/finance")
+    axios
+      .get("/finance")
       .then(function (response) {
         setRows(response.data.finances.finances);
         setTotalRows(11);
@@ -175,8 +185,9 @@ function Finance() {
           alignItems: "center",
           width: "100%",
           gap: "20px",
-          margin: "20px 0",
+          padding: "20px 0",
           flexWrap: "wrap",
+          borderBottom: "1px solid #D9D9D9",
         }}
       >
         <CSelect
@@ -220,7 +231,7 @@ function Finance() {
             return (
               <TableRow
                 hover
-                onClick={(event) => handleClick(event, row.name)}
+                onClick={(event) => handleClick(event, row)}
                 role="checkbox"
                 aria-checked={isItemSelected}
                 tabIndex={-1}
@@ -246,7 +257,14 @@ function Finance() {
                 <TableCell align="left">{row.turnOver}</TableCell>
                 <TableCell align="left">{row.profitBeforeTax}</TableCell>
                 <TableCell align="left">{row.profitAfterTax}</TableCell>
-                <TableCell align="left">{row.declaration}</TableCell>
+                <TableCell align="left">{row.tax_final_declaration}</TableCell>
+                <TableCell align="left">
+                  {row.elec_tax_final_declaration}
+                </TableCell>
+                <TableCell align="left">{row.confirm_form}</TableCell>
+                <TableCell align="left">
+                  {row.file_financial_statement}
+                </TableCell>
               </TableRow>
             );
           })}

@@ -162,8 +162,9 @@ function Asset() {
           alignItems: "center",
           width: "100%",
           gap: "20px",
-          margin: "20px 0",
+          padding: "20px 0",
           flexWrap: "wrap",
+          borderBottom: "1px solid #D9D9D9",
         }}
       >
         <CSelect
@@ -207,7 +208,7 @@ function Asset() {
             return (
               <TableRow
                 hover
-                onClick={(event) => handleClick(event, row.name)}
+                onClick={(event) => handleClick(event, row)}
                 role="checkbox"
                 aria-checked={isItemSelected}
                 tabIndex={-1}

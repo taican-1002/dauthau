@@ -1,31 +1,36 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 import {
-    AddCircleOutlineOutlined as AddIcon,
-    DeleteOutlined as DeleteIcon,
-    SettingsOutlined as UpdateIcon,
-    EmailOutlined as EmailIcon,
-    InsertDriveFileOutlined as FileIcon
-} from '@mui/icons-material';
+  AddCircleOutlineOutlined as AddIcon,
+  DeleteOutlined as DeleteIcon,
+  SettingsOutlined as UpdateIcon,
+  EmailOutlined as EmailIcon,
+  InsertDriveFileOutlined as FileIcon,
+} from "@mui/icons-material";
 
-import {Box, Grid, Paper} from '@mui/material';
+import { Box, Grid, Paper } from "@mui/material";
 
-import CForm from '../../../../common/components/controls/CForm/CForm'
-import CIconButton from '../../../../common/components/controls/CIconButton/CIconButton';
-import InfoItem from './InfoModalItem';
+import CForm from "../../../../common/components/controls/CForm/CForm";
+import CIconButton from "../../../../common/components/controls/CIconButton/CIconButton";
+import InfoItem from "./InfoModalItem";
 
 function ModalDetail() {
+  const [forms, setNewForm] = useState([]);
 
-    const [forms, setNewForm] = useState([])
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+    console.log("hdsahdhsa");
+  };
+  const handleClose = () => setOpen(false);
 
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => {setOpen(true); console.log('hdsahdhsa')};
-    const handleClose = () => setOpen(false);
-
-    const [openDelete, setOpenDelete] = React.useState(false);
-    const handleOpenDelete = () => {setOpenDelete(true); console.log('hdsahdhsa')};
-    const handleCloseDelete = () => setOpenDelete(false);
-
+  const [openDelete, setOpenDelete] = React.useState(false);
+  const handleOpenDelete = () => {
+    setOpenDelete(true);
+    console.log("hdsahdhsa");
+  };
+  const handleCloseDelete = () => setOpenDelete(false);
+  
     const handleAddForm = () => {
         setNewForm([...forms, '1'])
     }
@@ -95,4 +100,4 @@ function ModalDetail() {
     )
 }
 
-export default ModalDetail
+export default ModalDetail;
