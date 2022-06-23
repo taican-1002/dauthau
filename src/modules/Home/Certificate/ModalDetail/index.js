@@ -61,6 +61,7 @@ function ModalDetail() {
         </CIconButton>
       </Box>
 
+<<<<<<< HEAD
       <CForm
         label="Chi tiết chứng chỉ nhân sự"
         isOpen={open}
@@ -72,6 +73,56 @@ function ModalDetail() {
           <InfoItem />
         ))}
       </CForm>
+=======
+    return (
+        <div className='degree__modal-detail'>
+            <Box className='button-open-modal'>
+                <CIconButton 
+                    onOpenModal={handleOpen}
+                    className='button-export-newfile'
+                >
+                    <FileIcon/>
+                </CIconButton>
+                <CIconButton 
+                    onOpenModal={handleOpen}
+                    className='button-addnew'
+                >
+                    <AddIcon/>
+                </CIconButton>
+                <CIconButton 
+                    onOpenModal={handleOpen}
+                    className='button-sendemail'
+                >
+                    <EmailIcon/>
+                </CIconButton>
+                <CIconButton 
+                    onOpenModal={handleOpen}
+                    className='button-update disabled'
+                >
+                    <UpdateIcon/>
+                </CIconButton>
+                <CIconButton 
+                    onOpenModal={handleOpenDelete}
+                    className='button-delete'
+                >
+                    <DeleteIcon/>
+                </CIconButton>
+            </Box>
+            
+            <CForm
+                label='Chi tiết chứng chỉ nhân sự'
+                isOpen = {open}
+                handleCloseModal = {handleClose}
+                addForm = {handleAddForm}
+            >
+                <InfoItem isInfoName={true}/>
+                {
+                    forms.map((item) => (
+                        <InfoItem/>
+                    ))
+                }
+            </CForm>
+>>>>>>> 70c7c1214526133af1185dd21fac7b11298fb1b3
 
       <CForm
         label="Xóa chứng chỉ nhân sự"
