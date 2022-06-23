@@ -38,7 +38,7 @@ function CForm({
         >
 
             <Box className='form__wrap__close' sx={{display: 'flex', justifyContent: 'flex-end'}}>
-                <IconButton>
+                <IconButton onClick={handleCloseModal}>
                     <ClearIcon></ClearIcon>
                 </IconButton>
             </Box>
