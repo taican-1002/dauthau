@@ -21,6 +21,12 @@ function ModalDetail() {
     console.log("hdsahdhsa");
   };
   const handleClose = () => setOpen(false);
+  const [openDelete, setOpenDelete] = React.useState(false);
+  const handleOpenDelete = () => {
+    setOpenDelete(true);
+    console.log("hdsahdhsa");
+  };
+  const handleCloseDelete = () => setOpenDelete(false);
 
   return (
     <div id="asset" className="modal-detail">
