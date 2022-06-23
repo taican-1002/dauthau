@@ -7,7 +7,7 @@ import CSelect from "../../../common/components/controls/CInput/CSelect/CSelect"
 import CButton from "../../../common/components/controls/CButton/CButton";
 import CInput from "../../../common/components/controls/CInput/CInput";
 
-import axios from 'axios';
+import axios from "axios";
 
 import baseReq from "../../../apis/baseReq";
 const headCells = [
@@ -136,7 +136,8 @@ function Asset() {
     //     console.log(error);
     //   });
 
-    axios.get("/asset")
+    axios
+      .get("/asset")
       .then(function (response) {
         setRows(response.data.assets.assets);
         setTotalRows(11);

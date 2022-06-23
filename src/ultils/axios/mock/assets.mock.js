@@ -1,9 +1,8 @@
-import dataAssets from '../../../../mock/assets/get-all.mock.json'
+import dataAssets from "../../../mock/assets/get-all.mock.json";
 const assetsMock = (mock) => {
-    mock.onGet('/asset').reply(200,{
-        assets: dataAssets,
-    })
-}
+  mock.onGet("/asset").reply(200, {
+    assets: dataAssets,
+  });
+};
 
-
-export default assetsMock
+export default assetsMock;
