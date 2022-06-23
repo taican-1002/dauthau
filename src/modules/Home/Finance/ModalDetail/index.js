@@ -40,12 +40,12 @@ function ModalDetail() {
   return (
     <div id="asset" className="modal-detail">
       <Box className="button-open-modal">
-        {/* <CIconButton 
-                    onOpenModal={handleOpenExport}
-                    className='button-export-newfile disabled'
-                >
-                    <FileIcon/>
-                </CIconButton> */}
+        <CIconButton
+          onOpenModal={handleOpenExport}
+          className="button-export-newfile disabled"
+        >
+          <FileIcon />
+        </CIconButton>
         <CIconButton onOpenModal={handleOpen} className="button-addnew">
           <AddIcon />
         </CIconButton>
