@@ -78,6 +78,7 @@ function ModalDetail() {
                 isOpen = {openExport}
                 className='manual'
                 handleCloseModal = {handleCloseExport}
+                nameAction = 'Lưu xuống'
             >
                 <ExportTable></ExportTable>
             </CForm>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {Modal, Box } from '@mui/material';
+import {Modal, Box, IconButton } from '@mui/material';
 
 import {
     AddCircleOutlineOutlined as AddIcon,
-
+    Clear as ClearIcon
 } from '@mui/icons-material';
 
 import classNames from "classnames";
@@ -36,6 +36,12 @@ function CForm({
         <Box className='form__wrap'
             sx={{minWidth: minWidthForm || '80%'}}
         >
+
+            <Box className='form__wrap__close' sx={{display: 'flex', justifyContent: 'flex-end'}}>
+                <IconButton>
+                    <ClearIcon></ClearIcon>
+                </IconButton>
+            </Box>
             <CLabel>
                 <span>{label}</span>
             </CLabel>

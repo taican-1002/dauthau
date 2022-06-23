@@ -19,11 +19,7 @@ function ExportTable() {
   },[])
 
   return (
-    <CTable
-      rows={rows}
-    >
-
-    </CTable>
+    <p>QQ nè Đỗ Nguyễn Tài Cẩn</p>
   )
 }
 
