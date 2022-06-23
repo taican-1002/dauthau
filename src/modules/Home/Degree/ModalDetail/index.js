@@ -33,12 +33,12 @@ function ModalDetail() {
     return (
         <div className='degree__modal-detail'>
             <Box className='button-open-modal'>
-                <CIconButton 
+                {/* <CIconButton 
                     onOpenModal={handleOpen}
                     className='button-export-newfile'
                 >
                     <FileIcon/>
-                </CIconButton>
+                </CIconButton> */}
                 <CIconButton 
                     onOpenModal={handleOpen}
                     className='button-addnew'

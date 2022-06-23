@@ -34,7 +34,7 @@ function ModalDetail() {
             <Box className='button-open-modal'>
                 <CIconButton 
                     onOpenModal={handleOpenExport}
-                    className='button-export-newfile'
+                    className='button-export-newfile disabled'
                 >
                     <FileIcon/>
                 </CIconButton>
@@ -52,13 +52,13 @@ function ModalDetail() {
                 </CIconButton>
                 <CIconButton 
                     onOpenModal={handleOpen}
-                    className='button-update'
+                    className='button-update disabled'
                 >
                     <UpdateIcon/>
                 </CIconButton>
                 <CIconButton 
                     onOpenModal={handleOpen}
-                    className='button-delete'
+                    className='button-delete disabled'
                 >
                     <DeleteIcon/>
                 </CIconButton>
