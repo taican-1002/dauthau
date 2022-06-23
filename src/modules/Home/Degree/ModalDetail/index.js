@@ -34,68 +34,54 @@ function ModalDetail() {
     setNewForm([...forms, "1"]);
   };
 
-    return (
-        <div className='degree__modal-detail'>
-            <Box className='button-open-modal'>
-                {/* <CIconButton 
+  return (
+    <div className="modal-detail">
+      <Box className="button-open-modal">
+        {/* <CIconButton 
                     onOpenModal={handleOpen}
                     className='button-export-newfile'
                 >
                     <FileIcon/>
                 </CIconButton> */}
-                <CIconButton 
-                    onOpenModal={handleOpen}
-                    className='button-addnew'
-                >
-                    <AddIcon/>
-                </CIconButton>
-                <CIconButton 
-                    onOpenModal={handleOpen}
-                    className='button-sendemail'
-                >
-                    <EmailIcon/>
-                </CIconButton>
-                <CIconButton 
-                    onOpenModal={handleOpen}
-                    className='button-update'
-                >
-                    <UpdateIcon/>
-                </CIconButton>
-                <CIconButton 
-                    onOpenModal={handleOpenDelete}
-                    className='button-delete'
-                >
-                    <DeleteIcon/>
-                </CIconButton>
-            </Box>
-            
-            <CForm
-                label='Chi tiết bằng cấp nhân sự'
-                isOpen = {open}
-                handleCloseModal = {handleClose}
-                addForm={handleAddForm}
-            >
-                <InfoItem isInfoName={true}/>
-                {
-                    forms.map((item) => (
-                        <InfoItem/>
-                    ))
-                }
-            </CForm>
+        <CIconButton onOpenModal={handleOpen} className="button-addnew">
+          <AddIcon />
+        </CIconButton>
+        <CIconButton onOpenModal={handleOpen} className="button-sendemail">
+          <EmailIcon />
+        </CIconButton>
+        <CIconButton onOpenModal={handleOpen} className="button-update">
+          <UpdateIcon />
+        </CIconButton>
+        <CIconButton onOpenModal={handleOpenDelete} className="button-delete">
+          <DeleteIcon />
+        </CIconButton>
+      </Box>
 
-            {/* Form Delete */}
-            <CForm
-            label="Xóa bằng cấp nhân viên"
-            isOpen={openDelete}
-            handleCloseModal={handleCloseDelete}
-            addForm={handleOpenDelete}
-            minWidthForm="617px"
-            isHiddenAddMuti={true}
-            nameAction="Xóa"
-            className="manual modal-device"
-            >
-            <h3 style={{ fontSize: 24 }}>Bạn có chắc chắn muốn xóa không?</h3>
-            </CForm>
+      <CForm
+        label="Chi tiết bằng cấp nhân sự"
+        isOpen={open}
+        handleCloseModal={handleClose}
+        addForm={handleAddForm}
+      >
+        <InfoItem isInfoName={true} />
+        {forms.map((item) => (
+          <InfoItem />
+        ))}
+      </CForm>
+
+      {/* Form Delete */}
+      <CForm
+        label="Xóa bằng cấp nhân viên"
+        isOpen={openDelete}
+        handleCloseModal={handleCloseDelete}
+        addForm={handleOpenDelete}
+        minWidthForm="617px"
+        isHiddenAddMuti={true}
+        nameAction="Xóa"
+        className="manual modal-device"
+      >
+        <h3 style={{ fontSize: 24 }}>Bạn có chắc chắn muốn xóa không?</h3>
+      </CForm>
     </div>
   );
 }
